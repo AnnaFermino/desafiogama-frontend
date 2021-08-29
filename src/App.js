@@ -65,7 +65,8 @@ padding: 10px;
 background: #654ea3;
 margin-bottom: 15px;
 `;
-const Box = styled.div`
+
+const Box = styled.input`
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
