@@ -44,7 +44,7 @@ const Header = styled.header`
 text-align: center;
 padding: 30px;
 font-size: 40px;
-`
+`;
 
 const Button = styled.button`
 background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
@@ -57,21 +57,22 @@ justify-content: center;
 width: 100%;
 `;
 
-  const Container = styled.div`
-  text-align: center;
-  font-size: 20px;
-  color: white;
-  padding: 10px;
-  background: #654ea3;
-  margin-bottom: 15px;
-  `
-  const Box = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
- `
+const Container = styled.div`
+text-align: center;
+font-size: 20px;
+color: white;
+padding: 10px;
+background: #654ea3;
+margin-bottom: 15px;
+`;
+const Box = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+text-align: center;
+`;
+
 const App = () => {  
 
   const fetchAddress = async () => {
@@ -115,10 +116,8 @@ const App = () => {
 const [cpfError, setCpfError] = useState(false);
 
   return (
-    <MainDiv>
-    
+    <MainDiv>    
       <Header>Banco de Currículos JobsNET</Header>
-
     <div>
       <Container>DADOS PESSOAIS</Container>
       <div>
@@ -133,8 +132,7 @@ const [cpfError, setCpfError] = useState(false);
         <FormInput onChange= {(e) => {
           setForm({ ...form, profession: e.target.value });
         }} value={form.profession}></FormInput>
-      </div>
-         
+      </div>         
       <div>
         <Label>Cargo Pretendido</Label>
         <FormInput onChange= {(e) => {
@@ -230,7 +228,7 @@ const [cpfError, setCpfError] = useState(false);
         <Label>Celular *</Label>
         <FormInput onChange= {(e) => {
           setForm({ ...form, cellphone: e.target.value });
-        }} value={form.tcellphone}></FormInput>
+        }} value={form.cellphone}></FormInput>
       </div>
       </Box>
       <div>
@@ -238,8 +236,7 @@ const [cpfError, setCpfError] = useState(false);
         <FormInput onChange= {(e) => {
           setForm({ ...form, email: e.target.value });
         }} value={form.email}></FormInput>
-      </div>
-     
+      </div>     
       <Container>DOCUMENTOS</Container>
       <Box>
       <div>
@@ -277,8 +274,7 @@ const [cpfError, setCpfError] = useState(false);
           <option value="outro">Outro</option>
         </FormSelect>      
       </div>
-      </Box>
-    
+      </Box>    
       <Button onClick={() => createCandidate()}>Enviar</Button>
     </div>
     </MainDiv>
