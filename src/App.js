@@ -66,7 +66,7 @@ background: #654ea3;
 margin-bottom: 15px;
 `;
 
-const Box = styled.input`
+const Box = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
@@ -83,7 +83,7 @@ const App = () => {
 
   const createCandidate = async (candidate) => {
     try {
-      const user = await axios.post(process.env.REACT_APP_DESAFIO, form);
+      const user = await axios.post('https://desafiogama-backend.herokuapp.com/register', form);
       if (user.status === 200) {
         alert('Candidato cadastrado com sucesso');
       }   
