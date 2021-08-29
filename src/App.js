@@ -106,6 +106,7 @@ const App = () => {
     state: '',
     telephone1: '',
     telephone2: '',
+    cellphone: '',
     email: '',
     identity: '',
     cpf: '',
